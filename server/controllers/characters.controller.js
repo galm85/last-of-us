@@ -10,6 +10,11 @@ exports.getAll = async(req,res)=>{
 exports.postChar  = async(req,res)=>{
     let char = new Character(req.body);
     char.image = req.file.filename;
+    if(!char.gender) char.gender = "Unknown";
+    if(!char.voice) char.voice = 'Unknown';
+    if(!char.age) char.age = 0;
     await char.save();
-    res.send('new char saved');
+    res.redirect('/admin/characters');
+    
+    
 }
