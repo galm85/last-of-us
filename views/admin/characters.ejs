@@ -1,0 +1,50 @@
+<%- include('../includes/header')  %> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Characters</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+           <a class="btn btn-outline-primary" href="/admin/add-char">Add New</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for( let i = 0; i < characters.length; i++ ) { %>
+                        <tr>
+                            <td><%= i+1 %> </td>
+                            <td><img src="/images/<%= characters[i].image %> "width="50px" alt=""></td>
+                            <td><%= characters[i].name %> </td>
+                            <td><%= characters[i].status %> </td>
+                            <td>
+                                <a href="">Edit</a>
+                                <a href="">Delete</a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('../includes/footer')  %> 
