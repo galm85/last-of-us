@@ -18,3 +18,9 @@ exports.postChar  = async(req,res)=>{
     
     
 }
+
+
+exports.delete = async(req,res)=>{
+    await Character.findByIdAndDelete(req.params.id);
+    res.send('Chars deleted');
+}
