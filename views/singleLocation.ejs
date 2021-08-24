@@ -1,0 +1,15 @@
+<%-include('includes/header') %>
+<div class="container single-container">
+    <div class="row">
+        <div class="col-lg-6">
+            <img width="100%" src="/images/<%- location.image %> " alt="location image">
+        </div>
+        <div class="col-md-6 single-data">
+            <h1><%= location.title %> </h1>
+            <p><b>City:</b><%= location.city %> </p>
+            <small><b>About:</b></small>
+            <p><%= location.article %> </p>
+        </div>
+    </div>
+</div>
+<%-include('includes/footer') %>

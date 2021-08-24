@@ -36,7 +36,7 @@ app.use('/js',express.static(path.resolve(__dirname,'assets/js')));
 //routes
 app.use('/',require('./server/routes/pages.routes'));
 app.use('/admin',require('./server/routes/admin.routes'));
-app.use('/api/characters',require('./server/routes/characters.routes'));
+app.use('/api',require('./server/routes/api.routes'));
 
 
 

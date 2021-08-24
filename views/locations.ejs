@@ -1,3 +1,21 @@
 <%-include('includes/header') %>
-<h1>Locations</h1>
+<div class="container ">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Locations</h1>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <% locations.forEach(element => { %>
+         <div class="col-lg-4 col-md-6 character-card">
+             <a href="/locations/<%- element.title %> ">
+                <img src="/images/<%- element.image %> " alt="">
+            </a>
+             <h3><%- element.title %> </h3>
+         </div>
+        <% }) %>
+    </div>
+</div>
 <%-include('includes/footer') %>
