@@ -10,6 +10,10 @@ router.get('/locations',pagesController.locationsPage);
 router.get('/locations/:title',pagesController.singleLocation);
 
 
+router.get('/games',pagesController.gamesPage);
+router.get('/trailers',pagesController.trailersPage);
+
+
 
 
 module.exports = router

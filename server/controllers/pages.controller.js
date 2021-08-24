@@ -1,5 +1,6 @@
 const Character = require('../models/character.model');
 const Location = require('../models/location.model');
+const Game = require('../models/game.model');
 
 exports.homePage = async(req,res)=>{
     res.render('index');
@@ -26,3 +27,15 @@ exports.singleLocation = async(req,res)=>{
     const location = await Location.findOne({title:req.params.title});
     res.render('singleLocation',{location});
 }
+
+
+exports.gamesPage = async(req,res)=>{
+    const games = await Game.find({});
+    res.render('games',{games});
+}
+
+
+exports.trailersPage = (req,res)=>{
+    res.render('trailers');
+}
+
