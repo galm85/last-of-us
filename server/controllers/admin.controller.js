@@ -9,3 +9,9 @@ exports.characters = async(req,res)=>{
 exports.addChar = (req,res)=>{
     res.render('admin/addChar');
 }
+
+exports.editChar = async(req,res)=>{
+   
+    const char = await Character.findById(req.params.id);
+    res.render('admin/editChar',{char});
+}

@@ -2,56 +2,54 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Add New Character</h1>
+            <h1 class="text-center">Edit Character</h1>
         </div>
     </div>
     <div class="row justify-content-center mt-5">
-        <div class="col-md-5">
-            <form action="/api/characters" method="POST" enctype="multipart/form-data">
+        <div class="col-lg-5 col-md-10">
+            <form action="/api/characters/update/<%= char._id %> " method="POST" enctype="multipart/form-data">
                 <div class="form-group mt-3">
                     <label for="name">*Name:</label>
-                    <input type="text" name="name" id="name" class="form-control" required>
+                    <input type="text" name="name" id="name" class="form-control" value=<%= char.name %>  required>
                 </div>
                 <div class="form-group mt-3">
                     <label for="status">*Status:</label>
-                    <select name="status" id="status" class="form-control">
-                        <option value=""></option>
-                        <option value="Alive">Alive</option>
-                        <option value="Deceased">Deceased</option>
-                        <option value="Unknown">Unknown</option>
-                    </select>
+                    <input type="text" name="status" id="status" class="form-control"  value=<%= char.status %> required>
                 </div>
                 <div class="form-group mt-3 ">
                     <label for="gender">Gender:</label>
                     <div class="d-flex justify-content-around">
                         <div>
-                            <input type="radio" id="gender-male" name="gender" value="male" >
+                            <input type="radio" id="gender-male" name="gender" value="male"  <%=char.gender == 'male' ?'checked' : '' %> >
                             <label for="gender-male">Male</label>
                         </div>
                         <div>
-                            <input  type="radio" id="gender-female" name="gender" value="female">
+                            <input  type="radio" id="gender-female" name="gender" value="female" <%=char.gender == 'Female' ?'checked' : '' %> >
                             <label for="gender-female">Female</label>
                         </div>
                     </div>
                 </div>
                 <div class="form-group mt-3">
                     <label for="age">Age:</label>
-                    <input type="number" name="age" id="age" class="form-control">
+                    <input type="number" name="age" id="age" class="form-control"  value=<%= char.age == 0 ? "" : char.age %>>
                 </div>
                 <div class="form-group mt-3">
                     <label for="voice">Voiced By:</label>
-                    <input type="text" name="voice" id="voice" class="form-control" >
+                    <input type="text" name="voice" id="voice" class="form-control"  value= <%=char.voice%> >
                 </div>
                 <div class="form-group mt-3">
                     <label for="article">Article:</label>
-                    <textarea name="article" id="article" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="article" id="article" cols="30" rows="10" class="form-control"> <%=char.article%></textarea>
                 </div>
                 <div class="form-group mt-3">
                     <label for="image">*Image:</label>
-                    <input type="file" name="image" id="image" class="form-control" required>
+                    <input type="file" name="image" id="image" class="form-control" >
                 </div>
                 <div class="text-center mt-5">
-                    <button class="btn btn-outline-success">Save</button>
+                    <img src="/images/<%= char.image %> " width="100px" alt="">
+                </div>
+                <div class="text-center mt-5">
+                    <button class="btn btn-outline-success" >Save</button>
                 </div>
 
             </form>

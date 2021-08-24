@@ -33,8 +33,8 @@
                             <td><%= characters[i].name %> </td>
                             <td><%= characters[i].status %> </td>
                             <td>
-                                <a href="">Edit</a>
-                                <a class="delete-char" data-id=<%=characters[i]._id  %> ">Delete</a>
+                                <a href="/admin/edit-char/<%=characters[i]._id%>">Edit</a>
+                                <a class="delete-char" data-id=<%=characters[i]._id%> >Delete</a>
                             </td>
                         </tr>
                     <% } %>

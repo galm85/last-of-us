@@ -28,6 +28,7 @@ const upload = multer({storage:storage})
 
 router.get('/',charContorller.getAll);
 router.post('/', upload.single('image'),charContorller.postChar);
+router.post('/update/:id', upload.single('image'),charContorller.update);
 router.delete('/delete/:id',charContorller.delete);
 
 module.exports = router
