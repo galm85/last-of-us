@@ -8,8 +8,37 @@
 
 body{
     font-family: 'Lato', sans-serif;
-    background-color: rosybrown;
+    /* background: #314755; 
+    background: -webkit-linear-gradient(to right, #26a0da, #314755);  
+    background: linear-gradient(to right, #26a0da, #314755);  */
+    background-image: url('../images/backgroundblur.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+/* ============= Page Title ============ */
+
+.page-title{
+    width: max-content;
+    color: white;
+    background-color:rgba(0,0,0,0.3);
+    margin:  20px auto;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+.page-title h1{
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+
+
+
+
 
 /* ========= HOME PAGE =============== */
 
@@ -92,6 +121,7 @@ body{
 /* ========== CHARACTER CARD ================*/
 .character-card{
     height: 400px;
+    margin-top: 30px;
 }
 
 .character-card img{
@@ -144,6 +174,9 @@ body{
 
 .single-container{
    margin-top: 10vh;
+   min-height: 80vh;
+   
+   color: white;
 }
 
 .single-container img{
@@ -159,7 +192,7 @@ body{
 
 /* =========== Games Page ================*/
 .game-row{
-    background-color: rgb(236, 234, 234);
+    background-color: rgba(236, 234, 234, 0.582);
     margin: 50px 0;
     height: 500px;
     padding: 0;
@@ -180,5 +213,31 @@ body{
 .game-data{
     height: 100%;
     overflow: scroll;
-    padding: 20px 10px;
+    padding: 20px 30px;
+    
+}
+
+.game-data p{
+    margin-top: 20px;
+    text-align: justify;
+}
+
+
+
+
+/*  ========== FOOTER =============== */
+footer{
+    height: 8vh;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: auto;
+}
+
+footer p{
+    height: max-content;
+    margin: 1% 0;
+    font-size: 1.2rem;
+    font-weight: 300;
 }

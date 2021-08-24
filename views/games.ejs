@@ -1,6 +1,6 @@
 <%-include('includes/header') %>
 <div class="container ">
-    <div class="row">
+    <div class="row page-title">
         <div class="col-md-12">
             <h1 class="text-center">Games</h1>
         </div>
@@ -8,7 +8,7 @@
 
 
     <% games.forEach(game => { %>
-    <div class="row game-row">
+    <div class="row  game-row ">
          <div class="col-md-4 game-image">
             <img src="/images/<%= game.image%>" width="100%" alt="">
          </div>
