@@ -1,0 +1,54 @@
+<%- include('../includes/header')  %> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Games</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+           <a class="btn btn-outline-primary" href="/admin/add-game">Add Game</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Console</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% games.forEach((game,index) => { %>
+                        <tr>
+                            <td><%= index+1 %> </td>
+                            <td> <img src="/images/<%= game.image %>" width="50px" alt="game image">  </td>
+                            <td><%= game.title %> </td>
+                            <td><%= game.year %> </td>
+                            <td><%= game.console %> </td>
+                            <td>
+                                <a href="#">Edit</a>
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                   
+                   
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('../includes/footer')  %> 

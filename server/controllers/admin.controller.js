@@ -1,6 +1,7 @@
 const { render } = require('ejs');
 const Character = require('../models/character.model');
 const Location = require('../models/location.model');
+const Game = require('../models/game.model');
 
 
 exports.characters = async(req,res)=>{
@@ -26,4 +27,14 @@ exports.locations = async(req,res)=>{
 
 exports.addLocation = (req,res)=>{
     res.render('admin/addLocation');
+}
+
+
+exports.games = async(req,res)=>{
+    const games = await Game.find({});
+    res.render('admin/games',{games});
+}
+
+exports.addGame = (req,res)=>{
+    res.render('admin/addGame');
 }

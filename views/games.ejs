@@ -1,0 +1,25 @@
+<%-include('includes/header') %>
+<div class="container ">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Games</h1>
+        </div>
+    </div>
+
+
+    <% games.forEach(game => { %>
+    <div class="row game-row">
+         <div class="col-md-4 game-image">
+            <img src="/images/<%= game.image%>" width="100%" alt="">
+         </div>
+         <div class="col-md-8 game-data">
+             <h2><%= game.title %> </h2>
+             <h5>Year: <%= game.year %> </h5>
+             <h5>Console: <%= game.console %> </h5>
+             <p><%= game.article %> </p>
+         </div>
+        </div>
+    <% }) %>
+    
+</div>
+<%-include('includes/footer') %>
